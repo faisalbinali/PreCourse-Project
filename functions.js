@@ -66,7 +66,11 @@ function characterCount(string, c) {
  */
 function largestIncrement(numbers) {
   let counter = 0;
-  const a = numbers.forEach();
+  for (let i = 0; i < numbers.length - 1; i++) {
+    if (counter < numbers[i + 1] - numbers[i])
+      counter = numbers[i + 1] - numbers[i];
+  }
+  return counter;
 }
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
