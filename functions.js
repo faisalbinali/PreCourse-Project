@@ -46,7 +46,7 @@ function characterCount(string, c) {
   return b.length;
 }
 
-console.log(characterCount("Character Count is clever", "c"));
+//console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * largestIncrement(numbers):
@@ -103,15 +103,12 @@ function afterX(numbers, x) {
 function abbreviate(firstName, lastName) {
   let arrString1 = firstName.toUpperCase().split("");
   let arrString2 = lastName.toUpperCase().split("");
-
-  const result1 = arrString1.filter((arrString1) => arrString1.length === 1);
-  const result2 = arrString2.filter((arrString2) => arrString2.length === 1);
-  let result = result1[0].push();
-  result = result2[0].push();
-  console.log(result);
+  let a = arrString1[0];
+  let b = arrString2[0];
+  return a + b;
 }
 
-//console.log(abbreviate("miss", "Stephane"));
+console.log(abbreviate("miss", "Stephane"));
 
 /**
  * isUpperCase(string):
