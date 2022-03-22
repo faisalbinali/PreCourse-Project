@@ -19,9 +19,12 @@
  * sumOdds([3, 7, 8, 15, 2, 1, 13]) -> 39
  */
 function sumOdds(numbers) {
-  // Your code here
+  let sum = 0;
+  const oddNums = numbers.filter((num) => num % 2 === 1);
+  let a = oddNums.forEach((num) => (sum = sum + num));
+  return sum;
 }
-// console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
+//console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
 /**
  * characterCount(string, c):
@@ -37,9 +40,13 @@ function sumOdds(numbers) {
  * Another Hint: Use string methods to make it case-insensitive
  */
 function characterCount(string, c) {
-  // Your code here
+  let a = c.toUpperCase();
+  let arrString = string.toUpperCase().split("");
+  const b = arrString.filter((letter) => letter === a);
+  return b.length;
 }
-// console.log(characterCount("Character Count is clever", "c"));
+
+console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * largestIncrement(numbers):
@@ -58,7 +65,8 @@ function characterCount(string, c) {
  * largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> 545
  */
 function largestIncrement(numbers) {
-  // Your code here
+  let counter = 0;
+  const a = numbers.forEach();
 }
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
@@ -74,9 +82,12 @@ function largestIncrement(numbers) {
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
  */
 function afterX(numbers, x) {
-  // Your code here
+  let a = numbers.indexOf(x);
+  console.log(x);
+  const b = numbers.filter((num) => numbers.indexOf(num) > a);
+  return b;
 }
-// console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+//console.log(afterX([1, 2, 3, 4, 5, 2, 7, 8, 9], 3));
 
 /**
  * abbreviate(firstName, lastName):
@@ -90,9 +101,17 @@ function afterX(numbers, x) {
  * Hint: Use string method .toUpperCase()
  */
 function abbreviate(firstName, lastName) {
-  // Your code here
+  let arrString1 = firstName.toUpperCase().split("");
+  let arrString2 = lastName.toUpperCase().split("");
+
+  const result1 = arrString1.filter((arrString1) => arrString1.length === 1);
+  const result2 = arrString2.filter((arrString2) => arrString2.length === 1);
+  let result = result1[0].push();
+  result = result2[0].push();
+  console.log(result);
 }
-// console.log(abbreviate("miss", "Stephane"));
+
+//console.log(abbreviate("miss", "Stephane"));
 
 /**
  * isUpperCase(string):
@@ -105,7 +124,12 @@ function abbreviate(firstName, lastName) {
  *
  */
 function isUpperCase(string) {
-  // Your code here
+  let arrString = string.split("");
+  const a = arrString.filter((letter) => letter === letter.toUpperCase());
+  if (a.length === arrString.length) {
+    return true;
+  }
+  return false;
 }
 
 // console.log(isUpperCase("JCREW"));
