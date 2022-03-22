@@ -145,7 +145,11 @@ function isUpperCase(string) {
  *
  */
 function elementInArray(numbers, x) {
-  // Your code here
+  const a = numbers.filter((number) => number === x);
+  if (a == x) {
+    return true;
+  }
+  return false;
 }
 // console.log(elementInArray([5, 6, 7], 8));
 
